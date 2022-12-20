@@ -1,28 +1,29 @@
-# team-s1081746-project
-clock with rtc
+# Traffic Light Control System
 
-功能:數位電路中一個表示時間的方波訊號，
-而且不會以日常使用的時間單位表示。 
- 模組會在程式編譯上傳的同時被更新年份、
-日期和時間，配合整合型 LCD (I2C模式) 
-和大型數字顯示方式，
-分別在 LCD 上以四個不同頁面分別以年、日/月、
-(12/24格式)小時:分鐘和完整格式的方式顯示，
-藉由這種方式讓使用者了解 RTC 模組的基本使用方法
-接線完成之後，先來認識等一下會用到的 DS3231 暫存器。基本上
-，只有位址 0x00 ~ 0x06 會用到，分別代表秒、分鐘、小時、日、月和年，
-可讀取或是寫入 (變更) 時間，是 BCD 碼表示法
+A Traffic Light Control System , Based On Basys2 Board Using Verilog. Designed For Digital Logic Course Project.
 
-![image](https://user-images.githubusercontent.com/95560392/200489464-b836544d-85e8-47b3-b746-e87abc920b7c.png)
+## Introduction
+The crossroad traffic lights controls the traffic of `horizontal road`(h-road) and `vertical road`(v-road).
 
-使用板子;BASY3
-基本核心：
+It will run in 6 different modes according to the traffic of each road:
 
-rtcclock：原始的 RTC 時鐘模塊。這最初是為 Basys-3 板構建的，因此它還具有適用於命令 LED 和七段顯示器的輸出。
+* **Initial state.** Default state, the red / yellow / green lights will signal alternately with 16 sec for red / 3 sec for yellow and 16 sec for green.
 
+* **Busy in both h-road and v-road.** In this state, the system will test another signal called `peak` which means it is the rush hour of the day, making the time of red light 8 sec for horizental road.
 
-rtclight：只是基本的 RTC，沒有 LED 或七段顯示輸出線。
+* **Busy in h-road, idle in v-road.** In this state, the green light will signal forever for horizental road, the period will be 15 sec. When the count-down finishes, the system will test another signal called `pedestrain` which means there are pedestrains waiting at vertical road to cross, the green light at v-road will signal for one period until the `pedestrain` signal vanishes.
 
+* **Idle in h-road, busy in v-road.** In this state, the system behaves like **Busy in h-road, idle in v-road** but switches the behaviors for h-road and v-road.
 
-rtcgps：實時時鐘，可與清理後的 GPS PPS 一起使用，以將時鐘準確度保持在亞秒級到秒的頂部。需要進一步的工作才能使時鐘達到正確的秒數，但這會將其保持在正確的亞秒間隔內。
+* **Idle in both h-road and v-road.** In this state, the system behaves like **Busy in h-road, idle in v-road** but make the signal period of green light at h-road to 16 sec.
+
+* **Manual control.** In this state, all outside signals will be omitted and the auto-system will be down. All traffic light signals will be set directly from control center.
+
+## Module Overview
+<p align="center">
+  <img alt="Overview" width=70% src="https://raw.githubusercontent.com/yxwangcs/traffic-light-control-system/master/overview.svg?sanitize=true" />  
+</p>
+
+## License
+[MIT](https://github.com/yuxincs/traffic-light-control-system/blob/master/LICENSE).
 

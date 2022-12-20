@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "D:/traffic-light-control-system-main/Traffic.xst" -ofn "D:/traffic-light-control-system-main/Traffic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Traffic.ucf -p xc3s100e-cp132-4 Traffic.ngc Traffic.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o Traffic_map.ncd Traffic.ngd Traffic.pcf 
+par -w -intstyle ise -ol high -t 1 Traffic_map.ncd Traffic.ncd Traffic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Traffic.twx Traffic.ncd -o Traffic.twr Traffic.pcf -ucf Traffic.ucf 
+bitgen -intstyle ise -f Traffic.ut Traffic.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Traffic.ngc Traffic_synthesis.v 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Traffic_preroute.twx Traffic_map.ncd -o Traffic_preroute.twr Traffic.pcf -ucf Traffic.ucf 
+netgen -intstyle ise -s 4  -pcf Traffic.pcf -sdf_anno true -sdf_path "netgen/map" -insert_glbl true -w -dir netgen/map -ofmt verilog -sim Traffic_map.ncd Traffic_map.v 

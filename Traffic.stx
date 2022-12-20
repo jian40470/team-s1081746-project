@@ -1,0 +1,69 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/traffic-light-control-system-main/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to D:/traffic-light-control-system-main/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "FreqDiv_1ms.v" in library work
+Compiling verilog file "SEG7.v" in library work
+Module <FreqDiv_1ms> compiled
+Compiling verilog file "FreqDiv_1s.v" in library work
+Module <SEG7> compiled
+Compiling verilog file "Enabler.v" in library work
+Module <FreqDiv_1s> compiled
+Compiling verilog file "DigitTrans.v" in library work
+Module <Enabler> compiled
+Compiling verilog file "TimeTrans.v" in library work
+Module <DigitTrans> compiled
+Compiling verilog file "StateSwitch.v" in library work
+Module <TimeTrans> compiled
+Compiling verilog file "ModeRst.v" in library work
+Module <StateSwitch> compiled
+Compiling verilog file "ModeOnline.v" in library work
+Module <ModeRst> compiled
+Compiling verilog file "Mode4.v" in library work
+Module <ModeOnline> compiled
+Compiling verilog file "Mode3.v" in library work
+Module <Mode4> compiled
+Compiling verilog file "Mode2.v" in library work
+Module <Mode3> compiled
+Compiling verilog file "Mode1.v" in library work
+Module <Mode2> compiled
+Compiling verilog file "LightTrans.v" in library work
+Module <Mode1> compiled
+Compiling verilog file "DataSwitch.v" in library work
+Module <LightTrans> compiled
+Compiling verilog file "Controller.v" in library work
+Module <DataSwitch> compiled
+Compiling verilog file "Traffic.v" in library work
+Module <Controller> compiled
+Module <Traffic> compiled
+No errors in compilation
+Analysis of file <"Traffic.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total memory usage is 4477892 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

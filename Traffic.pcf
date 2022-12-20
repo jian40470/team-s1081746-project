@@ -1,0 +1,135 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu May 26 18:37:19 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CG" LOCATE = SITE "M5" LEVEL 1;
+COMP "CR" LOCATE = SITE "P7" LEVEL 1;
+COMP "CY" LOCATE = SITE "M11" LEVEL 1;
+COMP "MG" LOCATE = SITE "N4" LEVEL 1;
+COMP "Cc" LOCATE = SITE "K3" LEVEL 1;
+COMP "MR" LOCATE = SITE "G1" LEVEL 1;
+COMP "MY" LOCATE = SITE "P4" LEVEL 1;
+COMP "Cm" LOCATE = SITE "B4" LEVEL 1;
+COMP "PQc" LOCATE = SITE "P11" LEVEL 1;
+COMP "PQm" LOCATE = SITE "L3" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "red" LOCATE = SITE "A7" LEVEL 1;
+COMP "set" LOCATE = SITE "E2" LEVEL 1;
+COMP "rst" LOCATE = SITE "N3" LEVEL 1;
+COMP "peak" LOCATE = SITE "G3" LEVEL 1;
+COMP "oSeg<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "oSeg<1>" LOCATE = SITE "H12" LEVEL 1;
+COMP "oSeg<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "oSeg<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "oSeg<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "oSeg<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "oSeg<6>" LOCATE = SITE "M12" LEVEL 1;
+COMP "oSeg<7>" LOCATE = SITE "N13" LEVEL 1;
+COMP "green" LOCATE = SITE "C11" LEVEL 1;
+COMP "onlineLight" LOCATE = SITE "P6" LEVEL 1;
+COMP "oAn<0>" LOCATE = SITE "K14" LEVEL 1;
+COMP "oAn<1>" LOCATE = SITE "M13" LEVEL 1;
+COMP "oAn<2>" LOCATE = SITE "J12" LEVEL 1;
+COMP "oAn<3>" LOCATE = SITE "F12" LEVEL 1;
+COMP "online" LOCATE = SITE "F3" LEVEL 1;
+COMP "yellow" LOCATE = SITE "M4" LEVEL 1;
+COMP "setLight" LOCATE = SITE "N5" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "mode1/freqDiv/count_24" BEL "mode1/freqDiv/count_23" BEL
+        "mode1/freqDiv/count_22" BEL "mode1/freqDiv/count_21" BEL
+        "mode1/freqDiv/count_20" BEL "mode1/freqDiv/count_19" BEL
+        "mode1/freqDiv/count_18" BEL "mode1/freqDiv/count_17" BEL
+        "mode1/freqDiv/count_16" BEL "mode1/freqDiv/count_15" BEL
+        "mode1/freqDiv/count_14" BEL "mode1/freqDiv/count_13" BEL
+        "mode1/freqDiv/count_12" BEL "mode1/freqDiv/count_11" BEL
+        "mode1/freqDiv/count_10" BEL "mode1/freqDiv/count_9" BEL
+        "mode1/freqDiv/count_8" BEL "mode1/freqDiv/count_7" BEL
+        "mode1/freqDiv/count_6" BEL "mode1/freqDiv/count_5" BEL
+        "mode1/freqDiv/count_4" BEL "mode1/freqDiv/count_3" BEL
+        "mode1/freqDiv/count_2" BEL "mode1/freqDiv/count_1" BEL
+        "mode1/freqDiv/count_0" BEL "mode1/freqDiv/div" BEL
+        "mode2/freqDiv/count_24" BEL "mode2/freqDiv/count_23" BEL
+        "mode2/freqDiv/count_22" BEL "mode2/freqDiv/count_21" BEL
+        "mode2/freqDiv/count_20" BEL "mode2/freqDiv/count_19" BEL
+        "mode2/freqDiv/count_18" BEL "mode2/freqDiv/count_17" BEL
+        "mode2/freqDiv/count_16" BEL "mode2/freqDiv/count_15" BEL
+        "mode2/freqDiv/count_14" BEL "mode2/freqDiv/count_13" BEL
+        "mode2/freqDiv/count_12" BEL "mode2/freqDiv/count_11" BEL
+        "mode2/freqDiv/count_10" BEL "mode2/freqDiv/count_9" BEL
+        "mode2/freqDiv/count_8" BEL "mode2/freqDiv/count_7" BEL
+        "mode2/freqDiv/count_6" BEL "mode2/freqDiv/count_5" BEL
+        "mode2/freqDiv/count_4" BEL "mode2/freqDiv/count_3" BEL
+        "mode2/freqDiv/count_2" BEL "mode2/freqDiv/count_1" BEL
+        "mode2/freqDiv/count_0" BEL "mode2/freqDiv/div" BEL
+        "mode3/freqDiv/count_24" BEL "mode3/freqDiv/count_23" BEL
+        "mode3/freqDiv/count_22" BEL "mode3/freqDiv/count_21" BEL
+        "mode3/freqDiv/count_20" BEL "mode3/freqDiv/count_19" BEL
+        "mode3/freqDiv/count_18" BEL "mode3/freqDiv/count_17" BEL
+        "mode3/freqDiv/count_16" BEL "mode3/freqDiv/count_15" BEL
+        "mode3/freqDiv/count_14" BEL "mode3/freqDiv/count_13" BEL
+        "mode3/freqDiv/count_12" BEL "mode3/freqDiv/count_11" BEL
+        "mode3/freqDiv/count_10" BEL "mode3/freqDiv/count_9" BEL
+        "mode3/freqDiv/count_8" BEL "mode3/freqDiv/count_7" BEL
+        "mode3/freqDiv/count_6" BEL "mode3/freqDiv/count_5" BEL
+        "mode3/freqDiv/count_4" BEL "mode3/freqDiv/count_3" BEL
+        "mode3/freqDiv/count_2" BEL "mode3/freqDiv/count_1" BEL
+        "mode3/freqDiv/count_0" BEL "mode3/freqDiv/div" BEL
+        "mode4/freqDiv/count_24" BEL "mode4/freqDiv/count_23" BEL
+        "mode4/freqDiv/count_22" BEL "mode4/freqDiv/count_21" BEL
+        "mode4/freqDiv/count_20" BEL "mode4/freqDiv/count_19" BEL
+        "mode4/freqDiv/count_18" BEL "mode4/freqDiv/count_17" BEL
+        "mode4/freqDiv/count_16" BEL "mode4/freqDiv/count_15" BEL
+        "mode4/freqDiv/count_14" BEL "mode4/freqDiv/count_13" BEL
+        "mode4/freqDiv/count_12" BEL "mode4/freqDiv/count_11" BEL
+        "mode4/freqDiv/count_10" BEL "mode4/freqDiv/count_9" BEL
+        "mode4/freqDiv/count_8" BEL "mode4/freqDiv/count_7" BEL
+        "mode4/freqDiv/count_6" BEL "mode4/freqDiv/count_5" BEL
+        "mode4/freqDiv/count_4" BEL "mode4/freqDiv/count_3" BEL
+        "mode4/freqDiv/count_2" BEL "mode4/freqDiv/count_1" BEL
+        "mode4/freqDiv/count_0" BEL "mode4/freqDiv/div" BEL
+        "modeRst/freqDiv/count_24" BEL "modeRst/freqDiv/count_23" BEL
+        "modeRst/freqDiv/count_22" BEL "modeRst/freqDiv/count_21" BEL
+        "modeRst/freqDiv/count_20" BEL "modeRst/freqDiv/count_19" BEL
+        "modeRst/freqDiv/count_18" BEL "modeRst/freqDiv/count_17" BEL
+        "modeRst/freqDiv/count_16" BEL "modeRst/freqDiv/count_15" BEL
+        "modeRst/freqDiv/count_14" BEL "modeRst/freqDiv/count_13" BEL
+        "modeRst/freqDiv/count_12" BEL "modeRst/freqDiv/count_11" BEL
+        "modeRst/freqDiv/count_10" BEL "modeRst/freqDiv/count_9" BEL
+        "modeRst/freqDiv/count_8" BEL "modeRst/freqDiv/count_7" BEL
+        "modeRst/freqDiv/count_6" BEL "modeRst/freqDiv/count_5" BEL
+        "modeRst/freqDiv/count_4" BEL "modeRst/freqDiv/count_3" BEL
+        "modeRst/freqDiv/count_2" BEL "modeRst/freqDiv/count_1" BEL
+        "modeRst/freqDiv/count_0" BEL "modeRst/freqDiv/div" BEL
+        "modeOnline/light_1" BEL "modeOnline/light_0" BEL
+        "modeOnline/feedback" BEL "modeOnline/lightBuf_1" BEL
+        "modeOnline/lightBuf_0" BEL "lightTrans/fd_flicker/count_24" BEL
+        "lightTrans/fd_flicker/count_23" BEL "lightTrans/fd_flicker/count_22"
+        BEL "lightTrans/fd_flicker/count_21" BEL
+        "lightTrans/fd_flicker/count_20" BEL "lightTrans/fd_flicker/count_19"
+        BEL "lightTrans/fd_flicker/count_18" BEL
+        "lightTrans/fd_flicker/count_17" BEL "lightTrans/fd_flicker/count_16"
+        BEL "lightTrans/fd_flicker/count_15" BEL
+        "lightTrans/fd_flicker/count_14" BEL "lightTrans/fd_flicker/count_13"
+        BEL "lightTrans/fd_flicker/count_12" BEL
+        "lightTrans/fd_flicker/count_11" BEL "lightTrans/fd_flicker/count_10"
+        BEL "lightTrans/fd_flicker/count_9" BEL
+        "lightTrans/fd_flicker/count_8" BEL "lightTrans/fd_flicker/count_7"
+        BEL "lightTrans/fd_flicker/count_6" BEL
+        "lightTrans/fd_flicker/count_5" BEL "lightTrans/fd_flicker/count_4"
+        BEL "lightTrans/fd_flicker/count_3" BEL
+        "lightTrans/fd_flicker/count_2" BEL "lightTrans/fd_flicker/count_1"
+        BEL "lightTrans/fd_flicker/count_0" BEL "lightTrans/fd_flicker/div"
+        BEL "timeTrans/enb/fd_1ms/count_16" BEL
+        "timeTrans/enb/fd_1ms/count_15" BEL "timeTrans/enb/fd_1ms/count_14"
+        BEL "timeTrans/enb/fd_1ms/count_13" BEL
+        "timeTrans/enb/fd_1ms/count_12" BEL "timeTrans/enb/fd_1ms/count_11"
+        BEL "timeTrans/enb/fd_1ms/count_10" BEL "timeTrans/enb/fd_1ms/count_9"
+        BEL "timeTrans/enb/fd_1ms/count_8" BEL "timeTrans/enb/fd_1ms/count_7"
+        BEL "timeTrans/enb/fd_1ms/count_6" BEL "timeTrans/enb/fd_1ms/count_5"
+        BEL "timeTrans/enb/fd_1ms/count_4" BEL "timeTrans/enb/fd_1ms/count_3"
+        BEL "timeTrans/enb/fd_1ms/count_2" BEL "timeTrans/enb/fd_1ms/count_1"
+        BEL "timeTrans/enb/fd_1ms/count_0" BEL "timeTrans/enb/fd_1ms/div" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+SCHEMATIC END;
+
